@@ -1,0 +1,4 @@
+
+data = {"cod produs" : ""      , "denumire" : ""      , "vin" : ""      , "Categorie" : ""      , "producător" : ""      , "țara" : ""      , "zonă" : ""      , "apelațiune" : ""      , "soi" : ""      , "an" : ""      , "culoare" : ""      , "tip" : ""      , "vin" : ""      , "zahăr rezidual" : ""      , "alcool" : ""      , "capacitate" : ""      , "ambalaj" : ""      , "maturare" : ""      , "lemn" : ""      , "asociere" : ""      , "mâncare" : ""      , "potențial învechire" : ""      , "caracter" : ""      , "temperatură de servire" : ""      , "bio" : ""      , "aerare" : ""      , "RP" : ""      , "JS" : ""      , "JR" : ""      , "AG" : ""      , "D" : ""      , "WS" : ""      , "LM" : ""      , "RVF" : ""      , "90plus" : ""      , "preț" : ""      , "promotie" : ""      , "null"     : ""      , "stoc" : ""      , "poza" : ""      , "descriere" : ""      , "Descriere" : ""      , "crama": ""  }
+
+print(data)

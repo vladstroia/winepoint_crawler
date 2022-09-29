@@ -13,19 +13,25 @@
 import requests
 # from lxml import etree
 from bs4 import BeautifulSoup
+from links import links
 
-# Reading temperature of New York
-URL = "https://www.winepoint.ro/tari/vin-rosu/franta/bordeaux/saint-emilion/chateau-de-grand-mayne/saint-emilion-grand-cru-classe-2016"
+
+
+URL = links[0]
 resp = requests.get(URL)
 
 if resp.status_code == 200:
-
-    # Using BeautifulSoup
     soup = BeautifulSoup(resp.text, "lxml")
-    # print(soup.find(id="description"))
-    # print(soup.get_text())  
-    # for span in soup.find(id="productDescription").get_text():
-    #     print(span)
-    print(soup.find(id="productDescription").get_text())
-    # elements = soup.select('span[data-testid="TemperatureValue"][class^="CurrentConditions"]')
-    # print(elements[0].text)
+    data = soup.find(id="productDescription").get_text()
+    # data = data.split(":")
+    # data = data.replace("\n", "")
+    data = data.replace("\xa0", "")
+    data = data.strip() 
+    data = data.split("\n")
+    for line in data:
+        line = line.split(":")
+    print(data)
+    # print([x for x in data if x])
+    # for line in data:
+    #     print(line)
+    # print(soup.find(id="productDescription").get_text())
